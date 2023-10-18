@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>MaxGraph New Site</title>
+    <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer="defer" src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper"><a href="#" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+                    <nav class="header__nav">
+                        <ul class="header__list list-reset">
+                            <li class="header__item"><a href="index.html" class="header__link">Студия</a></li>
+                            <li class="header__item"><a href="#" class="header__link">Клиенты</a></li>
+                            <li class="header__item"><a href="shop.html"
+                                    class="header__link header__link--current">Магазин</a></li>
+                            <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+                        </ul>
+                    </nav><a href="#" class="header__link header__cart">Корзина</a>
+                </div>
+                <h1 class="header__title">Магазин готовых шаблонов</h1>
+            </div>
+        </header>
+        <main class="main">
+            <section class="content">
+                <div class="container">
+                    <div class="content__wrapper">
+                        <aside class="filters">
+                            <div class="filters__wrapper">
+                                <form action="" class="filters__form">
+                                    <div class="custom-range">
+                                        <div class="custom-range__wrapper">
+                                            <div class="custom-range__track"></div><input type="range" min="0" max="100"
+                                                value="30" id="slider-1" oninput="slideOne()"> <input type="range"
+                                                min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+                                        </div>
+                                        <div class="custom-range__values">
+                                            <div class="custom-range__value"><label for="range1">от</label> <input
+                                                    type="number" name="" id="range1" min="0" max="100" value="30">
+                                            </div>
+                                            <div class="custom-range__value"><label for="range2">до</label> <input
+                                                    type="number" id="range2" min="0" max="100" value="70"></div>
+                                        </div>
+                                    </div>
+                                    <div class="filters__block">
+                                        <h3 class="filters__title">Сетка:</h3>
+                                        <div class="filters__radios">
+                                            <div class="filters__radio"><input class="custom-radio" name="radio"
+                                                    type="radio" id="radio1" value="Адаптивная" checked="checked">
+                                                <label for="radio1">Адаптивная</label></div>
+                                            <div class="filters__radio"><input class="custom-radio" name="radio"
+                                                    type="radio" id="radio2" value="Фиксированная"> <label
+                                                    for="radio2">Фиксированная</label></div>
+                                            <div class="filters__radio"><input class="custom-radio" name="radio"
+                                                    type="radio" id="radio3" value="Резиновая"> <label
+                                                    for="radio3">Резиновая</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="filters__addblock">
+                                        <h3 class="filters__addtitle">Особенности:</h3>
+                                        <div class="filters__checkboxes">
+                                            <div class="filters__checkbox"><input type="checkbox"
+                                                    class="custom-checkbox" id="checkbox1" name="checkbox"
+                                                    value="Слайдер"> <label for="checkbox1">Слайдер</label></div>
+                                            <div class="filters__checkbox"><input type="checkbox"
+                                                    class="custom-checkbox" id="checkbox2" name="checkbox"
+                                                    value="Блок преимуществ"> <label for="checkbox2">Блок
+                                                    преимуществ</label></div>
+                                            <div class="filters__checkbox"><input type="checkbox"
+                                                    class="custom-checkbox" id="checkbox3" name="checkbox"
+                                                    value="Новости"> <label for="checkbox3">Новости</label></div>
+                                            <div class="filters__checkbox"><input type="checkbox"
+                                                    class="custom-checkbox" id="checkbox4" name="checkbox"
+                                                    value="Галерея"> <label for="checkbox4">Галерея</label></div>
+                                            <div class="filters__checkbox"><input type="checkbox"
+                                                    class="custom-checkbox" id="checkbox5" name="checkbox"
+                                                    value="Корзина"> <label for="checkbox5">Корзина</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="filters__button"><button>ПОКАЗАТЬ</button></div>
+                                </form>
+                            </div>
+                        </aside>
+                        <div class="content__body">
+                            <div class="content__header">
+                                <h3 class="content__title">Сортировать:</h3>
+                                <ul class="content__list list-reset">
+                                    <li class="content__item content__item--active">По цене</li>
+                                    <li class="content__item">По типу</li>
+                                    <li class="content__item">По названию</li>
+                                </ul>
+                                <div class="content__buttons">
+                                    <div class="content__button content__button--down content__button--active"></div>
+                                    <div class="content__button content__button--up"></div>
+                                </div>
+                            </div>
+                            <ul class="cards list-reset">
+                                <li class="cards__card">
+                                    <div class="cards__shape"></div><img src="img/sedona.png" alt="" class="cards__img">
+                                    <div class="cards__block">
+                                        <h4 class="cards__title">Sedona</h4>
+                                        <p class="cards__descr">Информационный сайт для туристов</p><a href="#"
+                                            class="cards__button btn"><span>9900</span> ₽</a>
+                                    </div>
+                                </li>
+                                <li class="cards__card">
+                                    <div class="cards__shape"></div><img src="img/pink.png" alt="" class="cards__img">
+                                    <div class="cards__block">
+                                        <h4 class="cards__title">Sedona</h4>
+                                        <p class="cards__descr">Информационный сайт для туристов</p><a href="#"
+                                            class="cards__button btn"><span>9900</span> ₽</a>
+                                    </div>
+                                </li>
+                                <li class="cards__card">
+                                    <div class="cards__shape"></div><img src="img/barbershop.png" alt=""
+                                        class="cards__img">
+                                    <div class="cards__block">
+                                        <h4 class="cards__title">Sedona</h4>
+                                        <p class="cards__descr">Информационный сайт для туристов</p><a href="#"
+                                            class="cards__button btn"><span>9900</span> ₽</a>
+                                    </div>
+                                </li>
+                                <li class="cards__card">
+                                    <div class="cards__shape"></div><img src="img/mishka.png" alt="" class="cards__img">
+                                    <div class="cards__block">
+                                        <h4 class="cards__title">Sedona</h4>
+                                        <p class="cards__descr">Информационный сайт для туристов</p><a href="#"
+                                            class="cards__button btn"><span>9900</span> ₽</a>
+                                    </div>
+                                </li>
+                                <li class="cards__card">
+                                    <div class="cards__shape"></div><img src="img/aplus.png" alt="" class="cards__img">
+                                    <div class="cards__block">
+                                        <h4 class="cards__title">Sedona</h4>
+                                        <p class="cards__descr">Информационный сайт для туристов</p><a href="#"
+                                            class="cards__button btn"><span>9900</span> ₽</a>
+                                    </div>
+                                </li>
+                                <li class="cards__card">
+                                    <div class="cards__shape"></div><img src="img/kvast.png" alt="" class="cards__img">
+                                    <div class="cards__block">
+                                        <h4 class="cards__title">Sedona</h4>
+                                        <p class="cards__descr">Информационный сайт для туристов</p><a href="#"
+                                            class="cards__button btn"><span>9900</span> ₽</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="cards__pages list-reset">
+                                <li class="cards__page cards__page--active"><a href="#" class="cards__number">1</a></li>
+                                <li class="cards__page"><a href="#" class="cards__number">2</a></li>
+                                <li class="cards__page"><a href="#" class="cards__number">3</a></li>
+                                <li class="cards__nextpage"><a href="#" class="cards__next">Следующая</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="map"><iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=16.66"
+                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <div class="container">
+                <div class="map__wrapper">
+                    <div class="map__block">
+                        <h3 class="map__h3">NЁRDS DESIGN STUDIO</h3>
+                        <p class="map__text">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br><br>тел. <a
+                                href="tel:+78122757575">+7 (812) 275-75-75</a></p><a href="#"
+                            class="map__button btn">Напишите нам</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div><!-- модальное окно --><!-- для js закрыть открыть модальное окно -->
+    <div class="modal"><!-- Обертка для формы wrapper -->
+        <div class="modal__wrapper"><!-- Шапка header в которой лежит заголовок и крестик -->
+            <div class="modal__header">
+                <h4 class="modal__title">Форма обратной связи</h4>
+                <div class="modal__cross"></div>
+            </div><!-- Тело самой формы в котором "ИМЯ(input)" "ЕМAIL(input)" "СООБЩЕНИЕ(textarea)"-->
+            <div class="modal__body">
+                <form action="" class="modal__form">
+                    <div class="modal__nameemail">
+                        <div class="modal__block"><label for="imputname">Ваше имя</label> <input type="text" name=""
+                                id="imputname" class="modal__imputform" minlength="2" maxlength="16"
+                                placeholder="Имя Фамилия"></div>
+                        <div class="modal__block"><label for="inputemail">Email</label> <input type="email" name=""
+                                id="inputemail" class="modal__imputform" minlength="2" maxlength="16"
+                                placeholder="Ваш Email"></div>
+                    </div>
+                    <div class="modal__blockarea"><label for="textarea">Сообщение</label> <textarea name="textarea"
+                            id="textarea" placeholder="Введите сообщение" class="modal__imputform"></textarea></div>
+                    <!-- Кнопка отправить --> <button class="modal__button btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="LinkFooter">
+        <div class="container">
+            <div class="LinkFooter__wrapper">
+                <ul class="LinkFooter__link list-reset">
+                    <li class="LinkFooter__item"><a href="#" class="LinkFooter__aimg"><img src="img/svg/vk-icon.svg"
+                                class="LinkFooter__vk" alt=""></a></li>
+                    <li class="LinkFooter__item"><a href="#" class="LinkFooter__aimg"><img src="img/svg/fb-icon.svg"
+                                class="LinkFooter__f" alt=""></a></li>
+                    <li class="LinkFooter__item"><a href="#" class="LinkFooter__aimg"><img
+                                src="img/svg/insta-icon.svg" class="LinkFooter__inst" alt=""></a></li>
+                </ul>
+                <div class="LinkFooter__text">
+                    <h2 class="LinkFooter__title">Давайте дружить, это выгодно!<p class="LinkFooter__sutitle">Скидка 10%
+                            для друзей из социальных сетей.</p>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order"><!-- Обертка для формы wrapper -->
+        <div class="order__wrapper"><!-- Шапка header в которой лежит заголовок и крестик -->
+            <div class="order__header">
+                <h4 class="order__title">Форма заказа</h4>
+                <div class="order__cross"></div>
+            </div><!-- Тело самой формы в котором "ИМЯ(input)" "ЕМAIL(input)" "СООБЩЕНИЕ(textarea)"-->
+            <div class="order__body">
+                <form action="" class="order__form">
+                    <div class="order__nameemail">
+                        <div class="order__block"><label for="imputname">ФИО:</label> <input type="text" name=""
+                                id="imputname" class="modal__imputform" minlength="2" maxlength="40" placeholder="ФИО">
+                        </div>
+                        <div class="order__block"><label for="inputemail">Email:</label> <input type="email" name=""
+                                id="inputemail" class="modal__imputform" minlength="2" maxlength="16"
+                                placeholder="Ваш Email"></div>
+                        <div class="order__block"><label for="inputtel">Тел:</label> <input type="tel" name=""
+                                id="inputtel" class="modal__imputform" placeholder="Телефон"></div>
+                    </div>
+                    <div class="order__blockarea"><label for="textarea">Комментарий к заказу:</label> <textarea
+                            name="textarea" id="textarea" placeholder="Введите сообщение"
+                            class="modal__imputform"></textarea></div><!-- Кнопка отправить --> <button
+                        class="order__button btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
